@@ -5,7 +5,7 @@ on:
     branches:
       - main
   schedule:
-    - cron: "0 0 * * *"
+    - cron: "0 0 * * *" # Executa todos os dias
 
 jobs:
   generate:
@@ -17,13 +17,13 @@ jobs:
       - name: Instalação de Dependências
         run: npm install
 
-      - name: Depurar o usuário do GitHub
+      - name: Depurar informações
         run: echo "${{ github.actor }}"
 
       - name: Gerar Snake Animation
         uses: Platane/snk@v2
         with:
-          github_user_name: 'OtavioDayrots' # substitua pelo seu GitHub username
+          github_user_name: '${{ github.actor }}' # Usa o usuário do contexto
 
       - name: Publicar no Branch de Output
         uses: peaceiris/actions-gh-pages@v3
