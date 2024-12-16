@@ -20,8 +20,8 @@ jobs:
       - name: Gerar Snake Animation no Modo Dark
         uses: Platane/snk@v2
         with:
-          github_user_name: 'OtavioDayrots' # Seu nome de usuário GitHub
-          svg_style: 'dark' # Modo Dark
+          github_user_name: 'OtavioDayrots'
+          args: --color dark  # Passando o modo dark aqui
 
       - name: Publicar no Branch de Output
         uses: peaceiris/actions-gh-pages@v3
