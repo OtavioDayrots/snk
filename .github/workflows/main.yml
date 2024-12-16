@@ -20,13 +20,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Generate Snake
-        uses: Platane/snk@v2
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          output: dist/github-contribution-grid-snake-dark.svg
-          output.svg.style: dark
-
 
   test-action:
     runs-on: ubuntu-latest
