@@ -22,9 +22,14 @@ jobs:
         with:
           github_user_name: '${{ github.actor }}' # Usa o usuário do workflow
 
+      - name: Análise com IA Simulada
+        run: |
+          echo "Iniciando Análise com IA..."
+          python3 scripts/ai_analysis.py
+          echo "Análise concluída com sucesso!"
+
       - name: Publicar no Branch de Output
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
-
+          publish_dir: ./dist 
