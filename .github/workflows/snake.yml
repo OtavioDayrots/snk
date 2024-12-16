@@ -23,7 +23,7 @@ jobs:
       - name: Gerar Snake Animation
         uses: Platane/snk@v2
         with:
-          github_user_name: '${{ github.actor }}' # Usa o usuário do contexto
+          github_user_name: "${{ github.actor }}" # Corrigindo para capturar automaticamente seu usuário
 
       - name: Publicar no Branch de Output
         uses: peaceiris/actions-gh-pages@v3
