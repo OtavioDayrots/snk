@@ -21,7 +21,7 @@ jobs:
         uses: Platane/snk@v2
         with:
           github_user_name: 'OtavioDayrots'
-          args: --color dark  # Passando o modo dark aqui
+          args: --color dark
 
       - name: Publicar no Branch de Output
         uses: peaceiris/actions-gh-pages@v3
