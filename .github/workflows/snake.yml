@@ -17,13 +17,14 @@ jobs:
       - name: Instalação de Dependências
         run: npm install
 
-      - name: Gerar Snake Animation no Modo Dark
+      - name: Gerar Snake Animation
         uses: Platane/snk@v2
         with:
-          github_user_name: 'OtavioDayrots'
+          github_user_name: '${{ github.actor }}' # Usa o usuário do workflow
 
       - name: Publicar no Branch de Output
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
+
