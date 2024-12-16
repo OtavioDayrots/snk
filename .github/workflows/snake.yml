@@ -18,6 +18,9 @@ jobs:
         uses: Platane/snk@v2
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          color_snake: "#ffffff" # Cor da cobra (branca para tema dark)
+          color_dots: "#666666" # Cor dos pontos (cinza escuro)
+          color_background: "#000000" # Fundo preto
 
       - name: Deploy Snake
         uses: crazy-max/ghaction-github-pages@v3.1.0
